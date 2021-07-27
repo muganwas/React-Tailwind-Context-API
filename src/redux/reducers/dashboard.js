@@ -1,10 +1,10 @@
 import {
     UPDATE_DASH
-} from '../types'
+} from '../types';
 
 const defaultState = {
     title: 'Dashboard'
-}
+};
 
 const dashReducer = (state = defaultState, action) => {
     switch (action.type) {
@@ -16,6 +16,6 @@ const dashReducer = (state = defaultState, action) => {
         default:
             return state
     }
-}
+};
 
-export default dashReducer
+export default dashReducer;

@@ -1,0 +1,23 @@
+.header-container {
+    padding: 14px 24px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.icon {
+    color: #12355F;
+}
+.badge {
+    right: 4px;
+    bottom: 4px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: thin solid #fff
+}
+.counter-badge {
+    right: 2px;
+    top: -2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    color: #fff;
+}
