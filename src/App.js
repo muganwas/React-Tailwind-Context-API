@@ -10,7 +10,7 @@ const HeaderComponent = () => <Provider store={store}><Header /></Provider>;
 
 const App = () => {
   return (
-    <div className="w-full flex-col">
+    <div className="w-full flex-col" data-testid='app-container'>
       <HeaderComponent />
       <div>
         <Router basename='/'>

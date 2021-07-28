@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+Array [
+  <div
+    class="w-full flex-col"
+    data-testid="app-container"
+  >
+    <div
+      class="flex max-w-full header-container justify-center items-center"
+    >
+      <div
+        class="h-8 w-auto md:h-7 sm:h-5 xsm:h-3 flex justify-center items-center"
+        id="logo-container"
+      >
+        <a
+          href="/dashboard"
+        >
+          <svg>
+            logo.svg
+          </svg>
+        </a>
+      </div>
+      <div
+        class="flex justify-end items-center flex-grow"
+      >
+        <div
+          class="flex flex-col relative justify-center items-center undefined"
+        >
+          <span
+            class="flex text-xs justify-center items-center absolute bg-primary h-4 w-4 md:h-3 md:w-3 counter-badge"
+          >
+            5
+          </span>
+          <button
+            class="flex p-1 cursor-pointer"
+          >
+            <svg
+              class="flex h-6 w-6 md:h-5 md:w-5"
+              fill="#12355F"
+            >
+              message.svg
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col relative justify-center items-center undefined"
+        >
+          <button
+            class="flex p-1 cursor-pointer"
+          >
+            <svg
+              class="flex h-6 w-6 md:h-5 md:w-5"
+              fill="#12355F"
+            >
+              wallet.svg
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col relative justify-center items-center undefined"
+        >
+          <span
+            class="flex text-xs justify-center items-center absolute bg-primary h-4 w-4 md:h-3 md:w-3 counter-badge"
+          >
+            10
+          </span>
+          <button
+            class="flex p-1 cursor-pointer"
+          >
+            <svg
+              class="flex h-6 w-6 md:h-5 md:w-5"
+              fill="#12355F"
+            >
+              notifications.svg
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex ml-3 justify-center items-center"
+        >
+          <div
+            class="relative"
+          >
+            <div
+              class="flex p-1 cursor-pointer"
+            >
+              <svg
+                class="h-10 w-auto md:h-8 sm:h-6 xsm:h-4"
+              >
+                person.svg
+              </svg>
+            </div>
+            <span
+              class="block absolute badge bg-primary"
+            />
+          </div>
+          <button
+            class="m-1 cursor-pointer"
+          >
+            <svg
+              class="h-2"
+            >
+              caret.svg
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="w-full h-full flex flex-col"
+      >
+        <div
+          class="flex flex-row"
+        >
+          <nav
+            class="flex flex-col side-nav-container"
+          >
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/projects"
+                  id="projects"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    projects.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Projects
+              </span>
+            </div>
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/help-desk"
+                  id="help-desk"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    helpdesk.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Help Desk
+              </span>
+            </div>
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/sites"
+                  id="sites"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    sites.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Sites
+              </span>
+            </div>
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/team"
+                  id="team"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    team.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Team
+              </span>
+            </div>
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <span
+                  class="flex text-xs justify-center items-center absolute bg-primary h-4 w-4 md:h-3 md:w-3 counter-badge"
+                >
+                  5
+                </span>
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/messages"
+                  id="messages"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    message.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Messages
+              </span>
+            </div>
+            <div
+              class="px-6 py-1 nav "
+            >
+              <div
+                class="flex flex-col relative justify-center items-center undefined"
+              >
+                <a
+                  class="flex p-1 cursor-pointer"
+                  href="/dashboard/payments"
+                  id="payments"
+                >
+                  <svg
+                    class="flex icon w-6 h-6 md:w-5 md:h-5 "
+                  >
+                    payments.svg
+                  </svg>
+                </a>
+              </div>
+              <span
+                class="nav-button-label"
+              >
+                Payments
+              </span>
+            </div>
+          </nav>
+          <div>
+            Base
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
