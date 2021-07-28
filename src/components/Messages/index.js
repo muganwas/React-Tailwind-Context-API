@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessagesList } from '..';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 const Messages = () => {
     return (

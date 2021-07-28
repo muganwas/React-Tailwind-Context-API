@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { UPDATE_MESSAGES, UPDATE_NOTIFICATIONS, UPDATE_TRANSACTIONS, UPDATE_SETTINGS_INFO } from '../../redux/types';
 import { SideNav, Messages } from '..';
