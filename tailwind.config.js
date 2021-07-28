@@ -5,13 +5,13 @@ module.exports = {
     screens: {
       'xsm': { 'max': '319px' },
       // => @media (max-width: 319px) { ... }
-      'sm': { 'min': '320px', 'max': '639px' },
+      'sm': { 'max': '639px' },
       // => @media (min-width: 320px) { ... }
-      'md': { 'min': '640px', 'max': '767px' },
+      'md': { 'max': '767px' },
       // => @media (min-width: 640px) { ... }
-      'lg': { 'min': '768px', 'max': '1279px' },
+      'lg': { 'max': '1279px' },
       // => @media (min-width: 768px) { ... }
-      'xlg': { 'min': '1280px', 'max': '1900px' },
+      'xlg': { 'max': '1900px' },
       // => @media (min-width: 1280px) { ... }
     },
     backgroundColor: theme => ({

@@ -1,28 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { images } from '../../resources';
-import Messaging from '@material-ui/icons/QuestionAnswer';
-import Wallet from '@material-ui/icons/AccountBalanceWallet';
-import Notification from '@material-ui/icons/Notifications';
+import { useSelector } from 'react-redux';
+import { NavButton } from '..';
+import { Message, Wallet, Notifications, Person, Caret, Logo } from '../../resources';
 import './style.css';
-
-const NavWrapper = ({ children, notificationCount, name, to }) => {
-    return (
-        <div className="relative">
-            {notificationCount > 0 && <span className="flex text-xs justify-center items-center absolute bg-primary counter-badge">{notificationCount}</span>}
-            <a id={name} href={to || "/"} className="flex p-1 cursor-pointer">
-                {children}
-            </a>
-        </div>
-    )
-}
-
-NavWrapper.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number, PropTypes.node]),
-    name: PropTypes.string,
-    to: PropTypes.string,
-    notificationCount: PropTypes.number
-}
 
 const AvatarWrapper = ({ children, notification, name }) => {
     return (
@@ -42,33 +23,44 @@ AvatarWrapper.propTypes = {
 }
 
 const Header = () => {
+    const info = useSelector(state => state.info);
+    const messages = info.messages;
+    const transactions = info.transactions;
+    const notifications = info.notifications;
+    const userConfig = info.settings;
+
     const showMore = () => { };
+
     return (
-        <div className="flex max-w-full header-container">
-            <div id='logo-container flex-grow-1'>
-                <img className='h-8 md:h-7 sm:h-5 xsm:h-3' alt='logo' src={images.logo} />
+        <div className="flex max-w-full header-container justify-center items-center">
+            <div className='h-8 w-auto md:h-7 sm:h-5 xsm:h-3 flex justify-center items-center' id='logo-container'>
+                <a href='/dashboard'>
+                    <Logo />
+                </a>
             </div>
             <div className="flex justify-end items-center flex-grow">
-                <NavWrapper notificationCount={5} name={'messages'} to="/messages">
-                    <Messaging className="flex icon" />
-                </NavWrapper>
-                <NavWrapper notificationCount={0} name={'wallet'}>
-                    <Wallet className="flex icon" />
-                </NavWrapper>
-                <NavWrapper notificationCount={10} name={'notifications'}>
-                    <Notification className="flex icon" />
-                </NavWrapper>
+                <NavButton notificationCount={messages.filter(msg => msg.status === 'new').length} name={'messages'}>
+                    <Message className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                </NavButton>
+                <NavButton notificationCount={transactions.filter(trans => trans.status === 'new').length} name={'wallet'}>
+                    <Wallet className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                </NavButton>
+                <NavButton notificationCount={notifications.filter(notf => !notf.read).length} name={'notifications'}>
+                    <Notifications className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                </NavButton>
                 <div className="flex ml-3 justify-center items-center">
-                    <AvatarWrapper notification={true} >
-                        <img alt='avatar' className="h-10 w-auto md:h-8 sm:h-6 xsm:h-4" src={images.stockUser} />
+                    <AvatarWrapper notification={userConfig.filter(conf => !conf.read).length > 0} >
+                        <Person className="h-10 w-auto md:h-8 sm:h-6 xsm:h-4" />
                     </AvatarWrapper>
                     <button className="m-1 cursor-pointer" onClick={showMore}>
-                        <img alt='more' className="h-2" src={images.caret} />
+                        <Caret className="h-2" />
                     </button>
                 </div>
             </div>
         </div>
     )
 }
+
+Header.propsTypes = {};
 
 export default Header;

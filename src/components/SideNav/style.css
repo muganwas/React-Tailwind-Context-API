@@ -1,0 +1,27 @@
+.side-nav-container {
+    border-right: 1px solid #EEEEEE;
+    height: 100%
+}
+.icon {
+    fill: #888888;
+}
+.icon.active {
+    fill: #12355F;
+}
+.nav {
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 0 solid rgba(0.0.0.0);
+    transition: border-left 0.1s;
+    font-size: 12px;
+    color: #888888;
+}
+.nav.active {
+    border-left: 4px solid #12355F;
+    background-color: #E7F2FF;
+    transition: border-left 0.1s;
+    color: #12355F;
+}
