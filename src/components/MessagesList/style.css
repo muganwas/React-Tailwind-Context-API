@@ -1,5 +1,6 @@
 .messages-list-container {
     border-right: 1px solid #EEEEEE;
+    height: 100%
 }
 .tab-container {
     box-shadow: 1px 3px 2px #EEEEEE;

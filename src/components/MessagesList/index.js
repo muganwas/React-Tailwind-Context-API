@@ -36,7 +36,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
         }
     });
     return (
-        <div className='flex flex-col flex-1 messages-list-container'>
+        <div className='flex flex-col overflow-hidden flex-1 messages-list-container'>
             <Search />
             <div className='flex flex-row tab-container'>
                 <div onClick={() => updateActiveTab('chats')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'chats' ? 'active' : ''}`}>
@@ -47,7 +47,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
                     <span className='flex'>Tickets</span>
                     <span className={`flex w-4 h-4 justify-center items-center ml-3 tabs-badge ${activeTab === 'tickets' ? 'active' : ''}`}>{unreadTickets.length}</span>
                 </div>
-                <div className='flex w-16 p-3 cursor-pointer justify-center items-center'>
+                <div className='flex w-16 p-3 cursor-pointer flex-grow-0 justify-center items-center'>
                     <Question className='flex' />
                 </div>
             </div>
@@ -60,7 +60,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
             <div className='flex flex-wrap justify-start items-center px-5 pb-3'>
                 {Filters.map((f, i) => <Capsule key={i} _onClick={() => updateFilter(f.text)} text={f.text} active={filter === f.text} />)}
             </div>
-            <div>
+            <div className='flex flex-col max-h-full overflow-scroll'>
                 {messages.map((message, i) => <MessageSummary kye={i} _onClick={() => updateActiveMessage(i)} key={i} message={message} active={activeMessage === i} />)}
             </div>
         </div>

@@ -1,0 +1,28 @@
+.msg-container {
+    border-right: 1px solid #EEEEEE;
+}
+.msg-title {
+    height: 66px;
+    background-color: #fff;
+    border-bottom: 1px solid #EEEEEE;
+}
+.ticket {
+    background-color: #fff;
+    border: 1px solid #EEEEEE;
+}
+.ticket-top {
+    background-color: yellow;
+    background-image: url('../../resources/svg/hd-ram.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.message-input-container {
+
+}
+.msg-input-prefix {
+    border-right: 1px solid #EEEEEE;
+}
+.attachments-container {
+    border-right: 1px solid #EEEEEE;
+}

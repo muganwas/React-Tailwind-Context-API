@@ -8,3 +8,4 @@ export { default as TextInput } from './TextInput';
 export { default as Search } from './Search';
 export { default as Capsule } from './Capsule';
 export { default as MessageSummary } from './MessageSummary';
+export { default as MessageDetails } from './MessageDetails';

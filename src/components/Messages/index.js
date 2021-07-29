@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { MessagesList } from '..';
+import { useSelector } from 'react-redux';
+import { MessagesList, MessageDetails } from '..';
 import './style.css';
 
 const Messages = () => {
+    const info = useSelector(state => state.info);
     const [activeMessage, updateActiveMessage] = useState();
     return (
-        <div className='flex flex-row h-full flex-grow messages-container'>
+        <div className='flex flex-row flex-grow messages-container'>
             <MessagesList activeMessage={activeMessage} updateActiveMessage={(v) => updateActiveMessage(v)} />
-            <div className='flex-1 bg-gray-500'></div>
-            <div className='flex-1 bg-gray-600'></div>
+            <MessageDetails message={info?.messages && info.messages[activeMessage]} />
+            <div className='flex flex-grow msg-bg'></div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
@@ -11,6 +11,14 @@ const DefaultComponent = () => <div>Base</div>;
 
 const Dashboard = () => {
     const dispatch = useDispatch();
+    const [height, updateHeight] = useState(window.innerHeight);
+    const onResize = e => updateHeight(e.target.innerHeight);
+    useEffect(() => {
+        window.addEventListener('resize', onResize)
+        return function cleanup() {
+            window.removeEventListener('resize', onResize);
+        }
+    })
     useEffect(() => {
         dispatch({ type: UPDATE_MESSAGES, payload: messagesAPI });
         dispatch({ type: UPDATE_NOTIFICATIONS, payload: notificationsAPI });
@@ -18,8 +26,8 @@ const Dashboard = () => {
         dispatch({ type: UPDATE_SETTINGS_INFO, payload: configurationAPI });
     }, [dispatch]);
     return (
-        <div className="w-full flex flex-col">
-            <div className="flex flex-1 flex-row">
+        <div style={{ height: height - 80 }} className="w-full max-h-full flex flex-col dash-container">
+            <div className="flex flex-1 flex-row max-h-full">
                 <SideNav />
                 <div className='flex flex-row flex-grow'>
                     <Switch>
