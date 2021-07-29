@@ -8,7 +8,7 @@ const NavButton = ({ children, notificationCount, name, to, _onClick, label, lab
         <>
             {label && labelPosition === 'top' && <span className={label_class}>{label}</span>}
             <div className={`flex flex-col relative justify-center items-center ${containerClass}`}>
-                {notificationCount > 0 && <span className={`flex text-xs justify-center items-center absolute bg-primary h-4 w-4 md:h-3 md:w-3 ${badge_class}`}>{notificationCount}</span>}
+                {notificationCount > 0 && <span className={`flex text-xs justify-center items-center absolute bg-primary h-4 w-4 md:h-3.5 md:w-3.5 ${badge_class}`}>{notificationCount}</span>}
                 {
                     to && !_onClick ?
                         <Link

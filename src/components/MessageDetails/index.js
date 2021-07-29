@@ -24,8 +24,8 @@ const MessageDetails = ({ message, updateActiveMessage }) => {
             <div className={`flex flex-col overflow-scroll h-full ${message.from ? 'items-end' : 'items-start'}`}>
                 {message && message.type === 'ticket' &&
                     <>
-                        <div className='flex flex-col rounded-md mt-6 mr-3 overflow-hidden justify-start items-start ticket'>
-                            <div className='flex flex-col justify-between h-32 w-80 ticket-top'>
+                    <div className='flex flex-col rounded-md mt-6 mr-3 lg:ml-3 overflow-hidden justify-start items-start ticket'>
+                        <div className='flex flex-col justify-between h-32 w-80 lg:h-28 md:h-24 lg:w-72 md:w-68 ticket-top'>
                                 <div className='flex justify-between mt-2 text-xs text-white'>
                                     <span
                                         style={{ backgroundColor: message.status === 'new' ? '#3498DB' : message.status === 'ongoing' ? '#2ECC71' : '#E74C3C' }}

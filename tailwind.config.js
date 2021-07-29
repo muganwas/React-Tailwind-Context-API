@@ -7,7 +7,7 @@ module.exports = {
       // => @media (max-width: 319px) { ... }
       'sm': { 'max': '639px' },
       // => @media (min-width: 320px) { ... }
-      'md': { 'max': '767px' },
+      'md': { 'max': '910px' },
       // => @media (min-width: 640px) { ... }
       'lg': { 'max': '1279px' },
       // => @media (min-width: 768px) { ... }
