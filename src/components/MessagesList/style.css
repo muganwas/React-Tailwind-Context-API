@@ -1,3 +1,37 @@
 .messages-list-container {
-    border-right: 1px solid  #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+.tab-container {
+    box-shadow: 1px 3px 2px #EEEEEE;
+}
+.tab {
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    transition: border-bottom 0.3s;
+    font-size: 14px;
+    color: #888888;
+    font-weight: bold;
+}
+.tab.active {
+    border-bottom: 2px solid #12355F;
+    transition: border-bottom 0.3s;
+    color: #12355F;
+}
+.tabs-badge {
+    color: #fff;
+    line-height: 14px;
+    text-align: center;
+    background-color: #888888;
+    border-radius: 100%
+}
+.tabs-badge.active {
+    background-color: #F48A21;
+}
+.new-ticket-container {
+    border-bottom: 1px solid #EEEEEE;
+}
+.new-ticket {
+    border: 1px solid #12355F;
+    color: #12355F;
+    font-weight: 600
 }

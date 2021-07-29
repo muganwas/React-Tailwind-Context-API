@@ -18,15 +18,15 @@ const Dashboard = () => {
         dispatch({ type: UPDATE_SETTINGS_INFO, payload: configurationAPI });
     }, [dispatch]);
     return (
-        <div className="w-full h-full flex flex-col">
-            <div className="flex flex-row">
+        <div className="w-full flex flex-col">
+            <div className="flex flex-1 flex-row">
                 <SideNav />
-                <>
+                <div className='flex flex-row flex-grow'>
                     <Switch>
                         <Route exact path='/dashboard/' component={DefaultComponent} />
                         <Route exact path='/dashboard/messages' component={MessagesComponent} />
                     </Switch>
-                </>
+                </div>
             </div>
         </div>
     )

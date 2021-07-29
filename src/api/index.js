@@ -1,5 +1,5 @@
 export const messagesAPI = [
-    { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
+    { type: 'message', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'ongoing', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'closed', time: 2, count: 0 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'ongoing', time: 2, count: 2 },
@@ -9,7 +9,7 @@ export const messagesAPI = [
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'ongoing', time: 2, count: 0 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'closed', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'ongoing', time: 2, count: 2 },
-    { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
+    { type: 'message', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
     { type: 'ticket', from: 'Adam Clark', issue: 'Hard drive and RAM', team: 'IT', location: 'Mumbai', siteId: 'XYZ123', status: 'new', time: 2, count: 2 },
