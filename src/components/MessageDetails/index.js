@@ -33,13 +33,13 @@ const MessageDetails = ({ message }) => {
                                     >
                                         {message.status}
                                     </span>
-                                    <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 mr-1 justify-center items-center'>1/3</span>
+                                <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 mr-2 justify-center items-center'>1/3</span>
                                 </div>
                                 <div className='flex justify-between mb-2 text-xs text-white'>
-                                    <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 mr-1 justify-center items-center'>
+                                <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 ml-2 justify-center items-center'>
                                         {message.location}
                                     </span>
-                                    <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 mr-1 justify-center items-center'>
+                                <span className='flex px-2 py-1 rounded-lg bg-black bg-opacity-30 mr-2 justify-center items-center'>
                                         <PaperClip className='mr-1' />
                                         <span>{message.count}</span>
                                     </span>
