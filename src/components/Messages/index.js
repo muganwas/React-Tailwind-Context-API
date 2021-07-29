@@ -6,9 +6,15 @@ import './style.css';
 const Messages = () => {
     const info = useSelector(state => state.info);
     const [activeMessage, updateActiveMessage] = useState();
+    const onUpdateMessage = id => {
+        info?.messages?.map((message, i) => {
+            if (message.id === id) updateActiveMessage(i);
+            return null;
+        });
+    }
     return (
         <div className='flex flex-row flex-grow messages-container'>
-            <MessagesList activeMessage={activeMessage} updateActiveMessage={(v) => updateActiveMessage(v)} />
+            <MessagesList activeMessage={activeMessage} updateActiveMessage={onUpdateMessage} />
             <MessageDetails message={info?.messages && info.messages[activeMessage]} updateActiveMessage={(v) => updateActiveMessage(v)} />
             <div className='flex flex-grow msg-bg'></div>
         </div>

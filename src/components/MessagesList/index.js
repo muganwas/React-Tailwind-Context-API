@@ -24,7 +24,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
     const unreadTickets = unread.filter(msg => msg.type === 'ticket');
     const unreadMessages = unread.filter(msg => msg.type === 'message');
     const [screenW, updateScreenW] = useState(window.innerWidth);
-    const [activeTab, updateActiveTab] = useState('tickets');
+    const [activeTab, updateActiveTab] = useState('ticket');
     const [filter, updateFilter] = useState('All');
     const onWindowResize = (e) => {
         updateScreenW(e.target.innerWidth);
@@ -39,13 +39,13 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
         <div className='flex flex-col overflow-hidden flex-1 messages-list-container'>
             <Search />
             <div className='flex flex-row tab-container'>
-                <div onClick={() => updateActiveTab('chats')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'chats' ? 'active' : ''}`}>
+                <div onClick={() => updateActiveTab('message')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'message' ? 'active' : ''}`}>
                     <span className='flex'>Chat</span>
-                    <span className={`flex w-4 h-4 justify-center items-center ml-3 tabs-badge ${activeTab === 'chats' ? 'active' : ''}`}>{unreadMessages.length}</span>
+                    <span className={`flex w-4 h-4 justify-center items-center ml-3 tabs-badge ${activeTab === 'message' ? 'active' : ''}`}>{unreadMessages.length}</span>
                 </div>
-                <div onClick={() => updateActiveTab('tickets')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'tickets' ? 'active' : ''}`}>
+                <div onClick={() => updateActiveTab('ticket')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'ticket' ? 'active' : ''}`}>
                     <span className='flex'>Tickets</span>
-                    <span className={`flex w-4 h-4 justify-center items-center ml-3 tabs-badge ${activeTab === 'tickets' ? 'active' : ''}`}>{unreadTickets.length}</span>
+                    <span className={`flex w-4 h-4 justify-center items-center ml-3 tabs-badge ${activeTab === 'ticket' ? 'active' : ''}`}>{unreadTickets.length}</span>
                 </div>
                 <div className='flex w-16 p-3 cursor-pointer flex-grow-0 justify-center items-center'>
                     <Question className='flex' />
@@ -61,7 +61,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
                 {Filters.map((f, i) => <Capsule key={i} _onClick={() => updateFilter(f.text)} text={f.text} active={filter === f.text} />)}
             </div>
             <div className='flex flex-col max-h-full overflow-scroll'>
-                {messages.map((message, i) => <MessageSummary kye={i} _onClick={() => updateActiveMessage(i)} key={i} message={message} active={activeMessage === i} />)}
+                {messages.filter(message => message.type === activeTab).map((message, i) => <MessageSummary kye={i} _onClick={() => updateActiveMessage(message.id)} key={i} message={message} active={messages[activeMessage] && messages[activeMessage].id === message.id} />)}
             </div>
         </div>
     )
