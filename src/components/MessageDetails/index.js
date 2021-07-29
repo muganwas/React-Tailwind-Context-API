@@ -5,7 +5,7 @@ import { Close, PaperClip, Send, Camera, Smiley, PaperClipAlt } from '../../reso
 import { MessageSummary, TextInput } from '..';
 import './style.css';
 
-const MessageDetails = ({ message }) => {
+const MessageDetails = ({ message, updateActiveMessage }) => {
     const [title, updateTitle] = useState();
     useEffect(() => {
         const t = message.type === 'ticket' ? 'Raise a Ticket' : message.type === 'message' ? 'Message' : '';
@@ -18,7 +18,7 @@ const MessageDetails = ({ message }) => {
                     <span>
                         {title}
                     </span>
-                    <Close onClick={() => updateTitle(null)} className='flex cursor-pointer' />
+                <Close onClick={() => updateActiveMessage(null)} className='flex cursor-pointer' />
                 </div>
             }
             <div className={`flex flex-col overflow-scroll h-full ${message.from ? 'items-end' : 'items-start'}`}>
@@ -74,7 +74,8 @@ const MessageDetails = ({ message }) => {
 }
 
 MessageDetails.propTypes = {
-    message: PropTypes.object
+    message: PropTypes.object,
+    updateActiveMessage: PropTypes.func
 }
 
 MessageDetails.defaultProps = {

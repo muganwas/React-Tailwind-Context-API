@@ -9,7 +9,7 @@ const Messages = () => {
     return (
         <div className='flex flex-row flex-grow messages-container'>
             <MessagesList activeMessage={activeMessage} updateActiveMessage={(v) => updateActiveMessage(v)} />
-            <MessageDetails message={info?.messages && info.messages[activeMessage]} />
+            <MessageDetails message={info?.messages && info.messages[activeMessage]} updateActiveMessage={(v) => updateActiveMessage(v)} />
             <div className='flex flex-grow msg-bg'></div>
         </div>
     )
