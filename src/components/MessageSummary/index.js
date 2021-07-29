@@ -21,18 +21,18 @@ const MessageSummary = ({ message, active, _onClick, inMessage }) => {
                 {!inMessage && message.count > 0 && <span className={`flex w-4 h-4 justify-center items-center ml-2 text-xs tabs-badge active`}>{message.count}</span>}
                 {!inMessage && <Kebab className='flex ml-2' />}
             </div>
-            <div className='flex text-xs my-0.2 justify-between items-center'>
+            <div className='flex text-xs mt-1 justify-between items-center'>
                 <div className='flex'>
                     <span className='flex text-secondary'>Requested by</span>
                     <span className='text-primary ml-1 text-semibold'>{message.from}</span>
                 </div>
-                {!inMessage && <Phone className='flex' />}
+                {!inMessage && <Phone className='flex h-4' />}
             </div>
-            <div className='flex flex-row my-0.2 text-xs items-center'>
+            <div className='flex flex-row mt-1 text-xs items-center'>
                 <span className='flex text-secondary mr-1'>Team:</span>
                 <span style={inMessage ? { color: '#11616C', fontWeight: '600' } : {}} className='flex'>{message.team}</span>
             </div>
-            <div className='flex flex-row text-xs my-0.2 justify-between items-center'>
+            <div className='flex flex-row text-xs mt-1 justify-between items-center'>
                 <div className='flex flex-row text-xs items-center'>
                     <span className='flex text-secondary mr-1'>Location:</span>
                     <span style={inMessage ? { color: '#11616C', fontWeight: '600' } : {}} className='flex'>{message.location}</span>
@@ -42,7 +42,7 @@ const MessageSummary = ({ message, active, _onClick, inMessage }) => {
                     <span style={inMessage ? { color: '#11616C', fontWeight: '600' } : {}} className='flex'>{message.siteId}</span>
                 </div>
             </div>
-            <div className='flex flex-row text-xs my-0.5 justify-between items-center'>
+            <div className='flex flex-row text-xs mt-1 justify-between items-center'>
                 <div
                     style={!inMessage ? { backgroundColor: message.status === 'new' ? '#3498DB' : message.status === 'ongoing' ? '#2ECC71' : '#E74C3C' } : { color: '#888' }}
                     className={`flex flex-row text-xs items-center status-capsule rounded-full capitalize ${!inMessage && 'text-white px-1'}`}>
