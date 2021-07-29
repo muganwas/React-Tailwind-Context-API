@@ -1,0 +1,11 @@
+.status-icon {
+}
+.summary-container {
+    background-color: #fff;
+}
+.summary-container.active {
+    background-color: #E7F2FF;
+}
+.text-white {
+    color: white
+}

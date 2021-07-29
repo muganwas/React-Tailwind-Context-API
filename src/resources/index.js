@@ -13,3 +13,7 @@ export { ReactComponent as SearchIcon } from './svg/search.svg';
 export { ReactComponent as Arrow } from './svg/arrow.svg';
 export { ReactComponent as Question } from './svg/question.svg';
 export { ReactComponent as Plus } from './svg/plus.svg';
+export { ReactComponent as Pause } from './svg/pause.svg';
+export { ReactComponent as Phone } from './svg/phone.svg';
+export { ReactComponent as Play } from './svg/play.svg';
+export { ReactComponent as Kebab } from './svg/kebab.svg';

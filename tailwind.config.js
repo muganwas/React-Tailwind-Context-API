@@ -19,7 +19,12 @@ module.exports = {
       'primary': '#F48A21',
       'secondary': '#2ECC71',
       'danger': '#E74C3C'
-    })
+    }),
+    textColor: {
+      'primary': '#F48A21',
+      'secondary': '#888888',
+      'danger': '#E74C3C',
+    }
   },
   variants: {
     extend: {},
