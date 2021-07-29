@@ -52,9 +52,9 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
                 </div>
             </div>
             <div className='flex px-10 py-4 new-ticket-container'>
-                <div className='flex justify-center items-center px-3 py-2 w-full rounded-md cursor-pointer new-ticket'>
-                    <Plus />
-                    <span className='flex ml-4'>{`${'Raise a new ticket'.substring(0, screenW <= 737 ? 5 : screenW <= 837 ? 8 : screenW <= 1000 ? 15 : 20)} ${screenW < 1050 && '...'}`}</span>
+                <div className='flex justify-center text-sm items-center px-3 py-2 w-full rounded-md cursor-pointer new-ticket'>
+                    <Plus className="flex" />
+                    <span className='flex ml-4'>{`${'Raise a new ticket'.substring(0, screenW <= 737 ? 5 : screenW <= 837 ? 8 : screenW <= 1000 ? 15 : 20)} ${screenW < 1050 ? '...' : ''}`}</span>
                 </div>
             </div>
             <div className='flex flex-wrap justify-start items-center px-5 pb-3'>

@@ -1,3 +1,5 @@
 .search-container {
+    box-sizing: border-box;
     background-color: #EEEEEE;
+    height: 66px;
 }

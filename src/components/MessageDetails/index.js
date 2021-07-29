@@ -14,7 +14,7 @@ const MessageDetails = ({ message, updateActiveMessage }) => {
     return (
         <div className='flex flex-col flex-1 msg-bg msg-container'>
             {title &&
-                <div className='flex flex-row justify-between p-3 items-center msg-title'>
+                <div className='flex flex-row justify-between p-5 items-center msg-title'>
                     <span>
                         {title}
                     </span>
