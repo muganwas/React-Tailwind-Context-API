@@ -3,7 +3,7 @@
 exports[`renders learn react link 1`] = `
 Array [
   <div
-    class="w-full flex-col"
+    class="w-full h-screen flex-col"
     data-testid="app-container"
   >
     <div
@@ -107,15 +107,17 @@ Array [
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="flex flex-1 h-full"
+    >
       <div
-        class="w-full h-full flex flex-col"
+        class="w-full flex flex-col"
       >
         <div
-          class="flex flex-row"
+          class="flex flex-1 flex-row"
         >
           <nav
-            class="flex flex-col side-nav-container"
+            class="flex flex-col flex-grow-0 side-nav-container"
           >
             <div
               class="px-6 py-1 nav "
@@ -267,8 +269,12 @@ Array [
               </span>
             </div>
           </nav>
-          <div>
-            Base
+          <div
+            class="flex flex-row flex-grow"
+          >
+            <div>
+              Base
+            </div>
           </div>
         </div>
       </div>
