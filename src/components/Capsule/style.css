@@ -1,9 +1,7 @@
 .capsule-container {
     background-color: #fff;
     color: #888;
-    font-weight: 500;
     border: 1px solid #888;
-    font-size: 14px;
 }
 .capsule-container.active {
     background-color: #F48A21;

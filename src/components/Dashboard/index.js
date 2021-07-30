@@ -26,8 +26,8 @@ const Dashboard = () => {
         dispatch({ type: UPDATE_SETTINGS_INFO, payload: configurationAPI });
     }, [dispatch]);
     return (
-        <div style={{ height: height - 80 }} className="w-full max-h-full flex flex-col dash-container">
-            <div className="flex flex-1 flex-row max-h-full">
+        <div style={{ height: height - 65 }} className="w-full overflow-hidden h-full flex flex-col">
+            <div className="flex flex-1 flex-row h-full">
                 <SideNav />
                 <div className='flex flex-row flex-grow'>
                     <Switch>

@@ -23,7 +23,7 @@ Search.propTypes = {
 }
 
 Search.defaultProps = {
-    containerClass: 'flex p-3 search-container'
+    containerClass: 'flex p-3 bg-gray-light'
 }
 
 export default Search;

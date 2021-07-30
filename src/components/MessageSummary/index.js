@@ -18,7 +18,7 @@ const MessageSummary = ({ message, active, _onClick, inMessage }) => {
                     </>
                 }
                 <span className={`flex flex-grow text-sm font-medium ${!inMessage && 'ml-2'}`}>{message.issue} issue</span>
-                {!inMessage && message.count > 0 && <span className={`flex w-4 h-4 justify-center items-center ml-2 text-xs tabs-badge active`}>{message.count}</span>}
+                {!inMessage && message.count > 0 && <span className={`flex w-4 h-4 justify-center items-center ml-2 text-xs text-white rounded-full tabs-badge active`}>{message.count}</span>}
                 {!inMessage && <Kebab className='flex ml-2' />}
             </div>
             <div className='flex text-xs mt-1 justify-between items-center'>

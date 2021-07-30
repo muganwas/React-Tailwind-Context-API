@@ -60,7 +60,7 @@ const MessageDetails = ({ activeMessage, message, updateActiveMessage }) => {
     };
 
     return (
-        <div className={`flex flex-col overflow-hidden flex-1 ${activeMessage === null && 'sm:hidden'} msg-bg msg-container`}>
+        <div className={`flex flex-col overflow-hidden flex-1 ${activeMessage === null && 'sm:hidden'} bg-danger msg-container`}>
             {
                 title &&
                 <div className='flex flex-row flex-1 justify-between p-5 items-center msg-title'>

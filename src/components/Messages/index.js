@@ -13,10 +13,10 @@ const Messages = () => {
         });
     }
     return (
-        <div className='flex flex-row flex-grow messages-container'>
+        <div className='flex flex-row flex-grow h-full'>
             <MessagesList activeMessage={activeMessage} updateActiveMessage={onUpdateMessage} />
             <MessageDetails activeMessage={activeMessage} message={info?.messages && info.messages[activeMessage]} updateActiveMessage={(v) => updateActiveMessage(v)} />
-            <div className='flex flex-1 md:hidden msg-bg'></div>
+            <div className='flex flex-1 md:hidden bg-danger'></div>
         </div>
     )
 }

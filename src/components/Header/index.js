@@ -8,10 +8,10 @@ import './style.css';
 const AvatarWrapper = ({ children, notification, name }) => {
     return (
         <div className="relative">
-            <div id={name} className="flex p-1 cursor-pointer">
+            <div id={name} className="flex p-1 cursor-pointer lg:m-0.3 md:m-0.5">
                 {children}
             </div>
-            {notification && <span className="block absolute badge bg-primary" />}
+            {notification && <span className="block absolute right-1 bottom-1 h-3 w-3 rounded-full border border-white border-solid bg-primary" />}
         </div>
     )
 }
@@ -32,21 +32,21 @@ const Header = () => {
     const showMore = () => { };
 
     return (
-        <div className="flex max-w-full header-container justify-center items-center">
+        <div className="flex max-w-full border-b border-solid border-gray-light px-10 py-2 justify-center items-center">
             <div className='h-8 w-auto md:h-7 sm:h-5 xsm:h-3 flex justify-center items-center' id='logo-container'>
                 <a href='/dashboard'>
                     <Logo />
                 </a>
             </div>
             <div className="flex justify-end items-center flex-grow">
-                <NavButton notificationCount={messages.filter(msg => msg.status === 'new').length} name={'messages'}>
-                    <Message className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                <NavButton containerClass='mr-3 sm:mr-1' notificationCount={messages.filter(msg => msg.status === 'new').length} name={'messages'}>
+                    <Message className="flex h-5 w-5 sm:h-4 sm:w-4" fill='#12355F' />
                 </NavButton>
-                <NavButton notificationCount={transactions.filter(trans => trans.status === 'new').length} name={'wallet'}>
-                    <Wallet className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                <NavButton containerClass='mr-3 sm:mr-1' notificationCount={transactions.filter(trans => trans.status === 'new').length} name={'wallet'}>
+                    <Wallet className="flex h-5 w-5 sm:h-4 sm:w-4" fill='#12355F' />
                 </NavButton>
-                <NavButton notificationCount={notifications.filter(notf => !notf.read).length} name={'notifications'}>
-                    <Notifications className="flex h-6 w-6 md:h-5 md:w-5" fill='#12355F' />
+                <NavButton containerClass='mr-3 sm:mr-1' notificationCount={notifications.filter(notf => !notf.read).length} name={'notifications'}>
+                    <Notifications className="flex h-5 w-5 sm:h-4 sm:w-4" fill='#12355F' />
                 </NavButton>
                 <div className="flex ml-3 justify-center items-center">
                     <AvatarWrapper notification={userConfig.filter(conf => !conf.read).length > 0} >

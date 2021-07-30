@@ -10,9 +10,9 @@ const HeaderComponent = () => <Provider store={store}><Header /></Provider>;
 
 const App = () => {
   return (
-    <div className="w-full max-h-full flex-col" data-testid='app-container'>
+    <div className="w-full h-full flex-col" data-testid='app-container'>
       <HeaderComponent />
-      <div className='flex max-h-full flex-1'>
+      <div className='flex h-full flex-1'>
         <Router basename='/'>
           <Switch>
             <Route path="/dashboard" component={DashboardComponent} />

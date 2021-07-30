@@ -18,7 +18,7 @@ Capsule.propTypes = {
 };
 
 Capsule.defaultProps = {
-    containerClass: 'flex px-5 py-1 rounded-full mx-2 mt-3 capsule-container cursor-pointer',
+    containerClass: 'flex px-5 py-1 font-semibold text-xs rounded-full mx-2 mt-3 capsule-container cursor-pointer',
 }
 
 export default Capsule;
