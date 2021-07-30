@@ -6,6 +6,9 @@
     background-color: #fff;
     border-bottom: 1px solid #EEEEEE;
 }
+.msg-bubble {
+    border: 1px solid #EEEEEE;
+}
 .ticket {
     background-color: #fff;
     border: 1px solid #EEEEEE;

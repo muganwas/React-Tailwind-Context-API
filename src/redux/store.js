@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import dashReducer from './reducers/dashboard';
+import userReducer from './reducers/userReducer';
 import informationReducer from './reducers/information';
 
 let middleware
@@ -13,12 +14,14 @@ else middleware = applyMiddleware(promise, thunk);
 
 const initialState = {
     dash: undefined,
-    info: undefined
+    info: undefined,
+    user: undefined
 };
 
 const allReducers = combineReducers({
     dash: dashReducer,
-    info: informationReducer
+    info: informationReducer,
+    user: userReducer
 })
 
 const store = createStore(allReducers, initialState, middleware)
