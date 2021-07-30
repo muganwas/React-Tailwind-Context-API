@@ -7,7 +7,7 @@ import { Close, PaperClip, Send, Camera, Smiley, PaperClipAlt } from '../../reso
 import { MessageSummary, TextInput } from '..';
 import './style.css';
 
-const MessageDetails = ({ message, updateActiveMessage }) => {
+const MessageDetails = ({ activeMessage, message, updateActiveMessage }) => {
     const user = useSelector(state => state.user);
     const [title, updateTitle] = useState();
     const [inputValue, updateInputValue] = useState('');
@@ -60,7 +60,7 @@ const MessageDetails = ({ message, updateActiveMessage }) => {
     };
 
     return (
-        <div className='flex flex-col flex-1 msg-bg msg-container'>
+        <div className={`flex flex-col overflow-hidden flex-1 ${activeMessage === null && 'sm:hidden'} msg-bg msg-container`}>
             {
                 title &&
                 <div className='flex flex-row flex-1 justify-between p-5 items-center msg-title'>
@@ -75,7 +75,7 @@ const MessageDetails = ({ message, updateActiveMessage }) => {
                     message && message.type === 'ticket' &&
                     <div className='flex flex-col items-end'>
                         <div className='flex flex-col flex-shrink-0 rounded-md overflow-hidden mt-6 mr-3 lg:ml-3 justify-start items-start ticket'>
-                            <div className='flex flex-col justify-between h-32 w-80 lg:h-28 md:h-24 lg:w-72 md:w-68 ticket-top'>
+                            <div className='flex flex-col justify-between h-32 lg:h-28 md:h-24 xlg:w-80 lg:w-60 md:w-full h-32 ticket-top'>
                                 <div className='flex justify-between mt-2 text-xs text-white'>
                                     <span
                                         style={{ backgroundColor: message.status === 'new' ? '#3498DB' : message.status === 'ongoing' ? '#2ECC71' : '#E74C3C' }}
@@ -143,6 +143,7 @@ const MessageDetails = ({ message, updateActiveMessage }) => {
 
 MessageDetails.propTypes = {
     message: PropTypes.object,
+    activeMessage: PropTypes.number,
     updateActiveMessage: PropTypes.func
 }
 

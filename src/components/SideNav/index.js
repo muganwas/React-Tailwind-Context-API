@@ -10,7 +10,7 @@ const SideNav = ({ location }) => {
     const info = useSelector(state => state.info);
     const messages = info.messages;
     return (
-        <nav className='flex flex-col flex-grow-0 side-nav-container'>
+        <nav className='flex flex-col sm:w-20 flex-grow-0 side-nav-container'>
             <div className={`px-6 py-1 nav ${location.pathname === '/dashboard/projects' ? 'active' : ''}`}>
                 <NavButton to='/dashboard/projects' name='projects' label='Projects' >
                     <Projects className={`flex icon w-6 h-6 md:w-5 md:h-5 ${location.pathname === '/dashboard/projects' ? 'active' : ''}`} />

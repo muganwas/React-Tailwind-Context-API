@@ -1,5 +1,6 @@
 .msg-container {
     border-right: 1px solid #EEEEEE;
+    height: 100%
 }
 .msg-title {
     height: 66px;

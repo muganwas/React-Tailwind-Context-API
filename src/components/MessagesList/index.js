@@ -36,7 +36,7 @@ const MessagesList = ({ activeMessage, updateActiveMessage }) => {
         }
     });
     return (
-        <div className='flex flex-col overflow-hidden flex-1 messages-list-container'>
+        <div className={`flex flex-col overflow-hidden ${activeMessage !== null && 'sm:hidden'} flex-1 messages-list-container`}>
             <Search />
             <div className='flex flex-row tab-container'>
                 <div onClick={() => updateActiveTab('message')} className={`flex flex-1 justify-center items-center tab ${activeTab === 'message' ? 'active' : ''}`}>

@@ -3,16 +3,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      'xsm': { 'max': '319px' },
+      // 'xxs': { 'max': '260px' },
+      // // => @media (max-width: 260px) { ... }
+      'xs': { 'max': '319px' },
       // => @media (max-width: 319px) { ... }
-      'sm': { 'max': '639px' },
-      // => @media (min-width: 320px) { ... }
+      'sm': { 'max': '655px' },
+      // => @media (min-width: 655px) { ... }
       'md': { 'max': '910px' },
-      // => @media (min-width: 640px) { ... }
-      'lg': { 'max': '1279px' },
-      // => @media (min-width: 768px) { ... }
-      'xlg': { 'max': '1900px' },
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 910px) { ... }
+      'lg': { 'min': '911px', 'max': '1399px' },
+      // => @media (min-width: 1399px) { ... }
+      'xlg': { 'min': '1400px' },
+      // => @media (max-width: 1400px) { ... }
     },
     backgroundColor: theme => ({
       ...theme('colors'),
@@ -20,11 +22,12 @@ module.exports = {
       'secondary': '#2ECC71',
       'danger': '#E74C3C'
     }),
-    textColor: {
+    textColor: theme => ({
+      ...theme('colors'),
       'primary': '#F48A21',
       'secondary': '#888888',
       'danger': '#E74C3C',
-    }
+    })
   },
   variants: {
     extend: {},
