@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { NavButton } from '..';
-import { Message, Wallet, Notifications, Person, Caret, Logo } from '../../resources';
+import { Message, Wallet, Notifications, Person, Caret } from '../../resources';
 import './style.css';
 
 const AvatarWrapper = ({ children, notification, name }) => {
@@ -32,10 +32,10 @@ const Header = () => {
     const showMore = () => { };
 
     return (
-        <div className="flex max-w-full border-b border-solid border-gray-light px-10 py-2 justify-center items-center">
-            <div className='h-8 w-auto md:h-7 sm:h-5 xsm:h-3 flex justify-center items-center' id='logo-container'>
+        <div className="flex max-w-full border-b border-solid border-gray-light px-10 py-2 sm:px-5 xs:px-2 justify-center items-center">
+            <div className='flex justify-center items-center' id='logo-container'>
                 <a href='/dashboard'>
-                    <Logo />
+                    <img alt='logo' className='h-8 w:auto md:h-6 sm:h-4' src={require('../../resources/png/logo.png').default} />
                 </a>
             </div>
             <div className="flex justify-end items-center flex-grow">

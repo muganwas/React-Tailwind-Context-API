@@ -7,8 +7,8 @@ module.exports = {
     screens: {
       // 'xxs': { 'max': '260px' },
       // // => @media (max-width: 260px) { ... }
-      'xs': { 'max': '319px' },
-      // => @media (max-width: 319px) { ... }
+      'xs': { 'max': '360px' },
+      // => @media (max-width: 360px) { ... }
       'sm': { 'max': '655px' },
       // => @media (min-width: 655px) { ... }
       'md': { 'max': '910px' },
