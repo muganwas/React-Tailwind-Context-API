@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { NavButton } from '..';
 import { Message, Wallet, Notifications, Person, Caret } from '../../resources';
 import './style.css';
@@ -22,12 +21,8 @@ AvatarWrapper.propTypes = {
     notification: PropTypes.bool
 }
 
-const Header = () => {
-    const info = useSelector(state => state.info);
-    const messages = info.messages;
-    const transactions = info.transactions;
-    const notifications = info.notifications;
-    const userConfig = info.settings;
+const Header = ({ messages, transactions, notifications, settings }) => {
+    const userConfig = settings;
 
     const showMore = () => { };
 

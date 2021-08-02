@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { Question, Plus } from '../../resources';
 import { Search, Capsule, MessageSummary } from '..';
 import './style.css';
@@ -17,9 +16,7 @@ const Filters = [{
     text: 'Closed',
 }];
 
-const MessagesList = ({ activeMessage, updateActiveMessage }) => {
-    const info = useSelector(state => state.info);
-    const messages = info.messages;
+const MessagesList = ({ activeMessage, updateActiveMessage, messages }) => {
     const unread = messages.filter(msg => msg.status === 'new');
     const unreadTickets = unread.filter(msg => msg.type === 'ticket');
     const unreadMessages = unread.filter(msg => msg.type === 'message');

@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { NavButton } from '..';
 import { Projects, Helpdesk, Payments, Sites, Message, Team } from '../../resources';
 import './style.css';
 
-const SideNav = ({ location, navClass }) => {
-    const info = useSelector(state => state.info);
-    const messages = info.messages;
+const SideNav = ({ location, navClass, messages }) => {
     return (
         <nav className='flex flex-col sm:w-20 flex-grow-0 h-full border-r border-solid border-gray-light'>
             <div className={`px-6 py-1 ${navClass} ${location.pathname === '/dashboard/projects' ? 'active' : ''}`}>

@@ -1,27 +1,28 @@
+import React from 'react';
 import './App.css';
 import { Dashboard } from './components';
-import { Provider } from 'react-redux';
 import { Header } from '../src/components';
-import store from './redux/store';
+import { MyContext, MyProvider } from './context';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom';
 
-const DashboardComponent = () => <Provider store={store}><Dashboard /></Provider>;
-const HeaderComponent = () => <Provider store={store}><Header /></Provider>;
+const HeaderComponent = (props) => <MyContext.Consumer>{context => <Header {...props} {...context} />}</MyContext.Consumer>;
 
-const App = () => {
-  return (
+const AppComponent = () => (
     <div className="w-full h-full flex-col" data-testid='app-container'>
       <HeaderComponent />
       <div className='flex h-full flex-1'>
         <Router basename='/'>
           <Switch>
-            <Route path="/dashboard" component={DashboardComponent} />
+          <Route path="/dashboard" component={Dashboard} />
             <Redirect from="/" to="/dashboard" />
           </Switch>
         </Router>
       </div>
     </div>
-  );
-}
+)
+
+const App = (props) => (<MyProvider>
+  <AppComponent {...props} />
+</MyProvider>);
 
 export default App;

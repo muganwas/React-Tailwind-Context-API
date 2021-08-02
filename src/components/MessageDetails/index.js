@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { cloneDeep } from 'lodash';
-import { useSelector } from 'react-redux';
 import { Close, PaperClip, Send, Camera, Smiley, PaperClipAlt } from '../../resources';
 import { MessageSummary, TextInput } from '..';
 import './style.css';
 
-const MessageDetails = ({ activeMessage, message, updateActiveMessage }) => {
-    const user = useSelector(state => state.user);
+const MessageDetails = ({ activeMessage, message, updateActiveMessage, user }) => {
     const [title, updateTitle] = useState();
     const [inputValue, updateInputValue] = useState('');
     const [messages, updateMessages] = useState([]);
